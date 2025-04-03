@@ -17,6 +17,7 @@ import Search from './page/Search';
 import ViewAllProducts from './page/ViewAll';
 import InboxDetail from './page/InboxDetail';
 import OrderDetails from './page/OrderDetails';
+import Profile from './page/Profile';
 import { useFonts } from 'expo-font';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -114,6 +115,7 @@ export default function App() {
                 <Stack.Screen name="ViewAllProducts" component={ViewAllProducts} />
                 <Stack.Screen name="InboxDetail" component={InboxDetail} />
                 <Stack.Screen name="OrderDetails" component={OrderDetails} />
+                <Stack.Screen name="Profile" component={Profile} />
               </Stack.Navigator>
             </NavigationContainer>
           </OrdersProvider>

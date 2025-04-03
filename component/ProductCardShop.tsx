@@ -74,3 +74,12 @@ export const Gallery = ({ image, name, price }) => (
         </View>
     </TouchableOpacity>
 );
+
+export const Gallery2 = ({ image }) => (
+    <TouchableOpacity className="mb-2 w-[32%]">
+        <Image
+            source={image}
+            className="w-full h-32 bg-gray-100"
+        />
+    </TouchableOpacity>
+);

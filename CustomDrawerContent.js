@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
 import { useNavigation } from '@react-navigation/native';
@@ -13,7 +13,10 @@ const CustomDrawerContent = (props) => {
     <DrawerContentScrollView {...props} className="bg-white">
       <View className="pt-5">
         {/* User Profile */}
-        <TouchableOpacity className="px-6 mb-5">
+        <TouchableOpacity className="px-6 mb-5" onPress={() => navigation.navigate('Profile', {
+          username: username,
+          profileImage: require('./assets/profile.png')
+        })}>
           <View className="w-20 h-20 rounded-full overflow-hidden mb-3">
             <Image
               source={require('./assets/profile.png')} // Sesuaikan dengan path gambar profil Anda
